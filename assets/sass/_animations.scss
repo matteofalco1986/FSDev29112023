@@ -1,0 +1,13 @@
+@mixin elementEntrance ($gap: 400, $time: 3s, $direction) {
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            top: ($gap*$direction) + px;
+        }
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+    animation: fadeIn $time ease-out forwards;
+}

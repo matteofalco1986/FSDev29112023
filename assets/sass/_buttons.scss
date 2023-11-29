@@ -1,0 +1,17 @@
+$borderRadius: 8px;
+
+@for $i from 1 to 4 {
+    .buttons {
+        p:nth-child(#{$i}){
+            display: inline-block;
+            background-color: nth($buttonColors, $i);
+            padding: nth($padding, 3);
+            border-radius: $borderRadius;
+            margin-bottom: nth($margin, 3);
+        }
+        p a{
+            color: white;
+            text-decoration: none;
+        }
+    }   
+}

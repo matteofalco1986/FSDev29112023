@@ -1,2 +1,59 @@
 @import "main";
 
+body {
+    font-size: $fontSize;
+    font-family: $fontText;
+    line-height: 1.3;
+    padding: 30px;
+    background-color: $bgHero;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+header {
+    margin-bottom: 180px;
+}
+
+.pageContainer {
+    color: $textColor;
+}
+
+main {
+    display: flex;
+}
+
+
+main div {
+    flex: 0 0 50%;
+}
+
+.mainText {
+    position: relative;
+    @include elementEntrance(800px, 3s, -1);
+}
+
+h1 {
+    @include bigTitle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideImage {
+    position: relative;
+    @include floating;
+    @include elementEntrance(400, 3s, -1);
+}
+
+img {
+    width: 100%;
+}
+
