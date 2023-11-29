@@ -13,7 +13,7 @@ li {
 }
 
 header {
-    margin-bottom: 180px;
+    margin-bottom: 30px;
 }
 
 .pageContainer {
@@ -49,11 +49,19 @@ a {
 
 .sideImage {
     position: relative;
-    @include floating;
     @include elementEntrance(400, 3s, -1);
 }
 
 img {
     width: 100%;
+    @include floating;
 }
 
+.imageContainer {
+    display: flex;
+
+}
+
+.imageContainer img {
+    flex-basis: 20%;
+}
