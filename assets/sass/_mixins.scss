@@ -1,6 +1,6 @@
 @mixin bigTitle {
     color: black;
-    font-size: 3em;
+    font-size: $fontSize * 4.5;
     font-weight: 700;
 }
 
@@ -10,7 +10,10 @@
     border: $border;
 }
 
-@mixin grid {
-    display: flex;
-    flex-wrap: wrap;
+h1 {
+    @include bigTitle;
+}
+
+img {
+    @include floating;
 }

@@ -1,2 +1,62 @@
-$padding: 1px, 2px, 4px, 6px, 8px, 16px;
-$margin: 1px, 2px, 4px, 6px, 8px, 16px;
+$padding: 2px, 8px, 32px, 64px, 80px, 160px;
+$margin: 2px, 8px, 32px, 64px, 80px, 160px;
+$numberOfImages: 4;
+$numberOfDivs: 2;
+
+@mixin flex ($items: 1, $wrap: no-wrap, $justify: flex-start, $size: 1){
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: center;
+    div {
+        flex-basis: calc((100/$items) * ($size * 1%));
+    }
+    & > img {
+        width: calc((100/$items) * ($size * 1%));
+    }
+}
+
+body {
+    padding: nth($padding, 3);
+}
+
+.mainText * {
+    margin-bottom: nth($margin, 3);
+}
+
+header {
+    margin-bottom: nth($margin, 4);
+}
+
+.headerContainer {
+    @include flex (2, no-wrap, space-between);
+}
+
+ul {
+    display: flex;
+    gap: nth($padding, 3);
+}
+
+main {
+    img {
+        width: 100%;
+    }
+    @include flex (2, no-wrap, space-between, 0.97)
+
+}
+
+.buttons {
+    p {
+        padding: nth($padding, 2) * 2;
+
+    }
+    display: flex;
+    gap: nth($padding, 2);
+}
+
+footer {
+    div {
+        @include flex(4, no-wrap, space-between, 0.9);
+    }
+}
+

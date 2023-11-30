@@ -1,13 +1,43 @@
-@mixin elementEntrance ($gap: 400, $time: 3s, $direction) {
+$direction: "top";
+
+@mixin elementEntrance ($gap: 400, $time: 3s, $direction: top) {
     @keyframes fadeIn {
         from {
             opacity: 0;
-            top: ($gap*$direction) + px;
+            #{$direction}: $gap+px;
+        }
+        75% {
+            opacity: 0.5;
         }
         to {
             opacity: 1;
-            top: 0;
+            #{$direction}: 0;
         }
     }
-    animation: fadeIn $time ease-out forwards;
+    animation: fadeIn $time ease-in-out;
+}
+
+@mixin swollen ($scale: 1, $duration: 2s){
+    scale: $scale * 1;
+    transition: scale $duration ease-in-out;
+}
+
+main {
+    position: relative;
+    @include elementEntrance(400, 3s, bottom);
+}
+
+footer {
+    position: relative;
+    @include elementEntrance(800, 3s, right)
+}
+
+.buttons {
+    p:hover {
+        @include swollen(1.05, 250ms);
+        cursor: pointer;
+    }
+    p:not(hover){
+        @include swollen(1, 250ms);
+    }
 }

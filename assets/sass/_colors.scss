@@ -1,3 +1,19 @@
 $textColor: #f4f4f4;
 $bgHero: #640fc5;
 $buttonColors: #0e6cff, #ff8700, #4caf50;
+
+body {
+    background-color: $bgHero;
+}
+
+.pageContainer {
+    color: $textColor;
+}
+
+li {
+  a {
+        text-decoration: none;
+        color: $textColor;
+    }
+    list-style: none;
+}

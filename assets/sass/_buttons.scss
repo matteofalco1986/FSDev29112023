@@ -5,11 +5,10 @@ $borderRadius: 8px;
         p:nth-child(#{$i}){
             display: inline-block;
             background-color: nth($buttonColors, $i);
-            padding: nth($padding, 3);
             border-radius: $borderRadius;
             margin-bottom: nth($margin, 3);
         }
-        p a{
+        p a:nth-child(#{$i}){
             color: white;
             text-decoration: none;
         }
