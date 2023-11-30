@@ -1,0 +1,4 @@
+# Ignore files listed
+
+.vscode
+.DS_Store
