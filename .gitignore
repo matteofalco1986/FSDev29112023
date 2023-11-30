@@ -1,4 +1,4 @@
 # Ignore files listed
 
-.vscode/
-.DS_Store
+echo ".vscode/"
+echo ".DS_Store"
